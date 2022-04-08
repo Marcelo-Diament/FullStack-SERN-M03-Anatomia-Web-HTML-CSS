@@ -117,3 +117,15 @@ app.post('/usuario', (req, res) => res.send('<h1>Rota POST para "/usuario"</h1>'
 _Como mencionado anteriormente, não é possível validarmos essa rota simplesmente acessando `http://localhost:3333/usuario` . Para validarmos essa etapa, vamos utilizar o Postman ou o Insomnia. Para realizarmos essa validação, copie o arquivo `./utils/FullStack-SERN-M03-Anatomia-Web-HTML-CSS.postman_collection.json` , abra o Postman, clique em `Import` ou `Importar` , selecione a opção `Raw Text` , cole o `JSON` e clique em `Continuar` . Confirme a importação e abra a `request` "Adicionar usuário", localizada dentro da pasta `Usuário` ._
 
 | Vale ressaltar que normalmente as respostas ( `response` ) são enviadas no formato `JSON` , mas por enquanto estamos retornando um `HTML` simples. Posteriormente iremos construir e consultar nossa própria API.
+
+No caso do `POST` , precisamos enviar o conteúdo dentro do `body` da `request` . Por isso, nessa `request` temos o seguinte `JSON` no body:
+
+```json
+{
+    "id": 1,
+    "nome": "Fulano",
+    "sobrenome": "da Silva"
+}
+```
+
+_O `id` costuma ser gerado automaticamente._
