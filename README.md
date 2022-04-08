@@ -156,3 +156,25 @@ app.delete('/usuario/:id', (req, res) => res.send(`<h1>Rota DELETE para "/usuari
 ```
 
 _Dessa vez usamos o `:id` , mas não precisamos enviar nenhum `body` , pois o usuário seria simplesmente excluído._
+
+### Dica Extra
+
+Indicamos que um trecho do caminho da rota é uma variável utilizando `:` antes do nome pelo qual chamaremos ela.
+
+Exemplo 1:
+
+- Rota: `/usuario/:nome`
+
+- URL: `http://localhost:3333/usuario/fulano`
+
+- Captura do `nome`: `req.params.nome` retornará "fulano"
+
+Exemplo 2:
+
+- Rota: `/usuario/:sobrenome`
+
+- URL: `http://localhost:3333/usuario/reis`
+
+- Captura do `sobrenome`: `req.params.sobrenome` retornará "reis"
+
+Também podemos indicar que uma variável é opcional inserindo `?` após essa variável (`/usuario/:nome?`).
