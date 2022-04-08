@@ -2,13 +2,32 @@
 	"info": {
 		"_postman_id": "e1fecc6d-9ae3-4537-8d47-dcd39c1028d4",
 		"name": "Full Stack SERN - Módulo 03 - Anatomia Web: HTML + CSS",
-		"description": "# Full Stack - SERN | Módulo 03 - Anatomia Web: HTML + CSS\r\n\r\nColeção destinada às práticas ao vivo do Módulo 03 (Anatomia da Web: HTML + CSS) do curso de programação Full Stack (SERN Stack).\r\n\r\n| Nessa prática, como não construímos uma API ainda, os retornos (`response`) são apenas HTMLs fictícios, mas normalmente trabalhamos com dados no formato JSON.\r\n\r\n## Variáveis\r\n\r\n`BASE_URL`: `http://localhost:3333`\r\n`ID`: `1`\r\n\r\n## Endpoints\r\n\r\nConfira a lista de recursos disponíveis nessa prática.\r\n\r\n### GET | Ver usuários\r\n\r\nObjetivo: leitura dos usuários (**R**ead do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios\r\nMétodo: GET\r\nQuery Params: vazio\r\nBody: vazio\r\n\r\n### POST | Criar usuário\r\n\r\nObjetivo: criação de um novo usuário (**C**reate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios\r\nMétodo: POST\r\nQuery Params: vazio\r\nBody:\r\n\r\n```json\r\n{\r\n    \"id\": 1,\r\n    \"nome\": \"Fulano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente não enviamos o `id`, pois ele é gerado automaticamente._\r\n\r\n### PUT | Atualizar usuário\r\n\r\nObjetivo: edição de um dos usuários (**U**pdate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios/{{ID}}\r\nMétodo: PUT\r\nQuery Params: vazio\r\nBody:\r\n\r\n```json\r\n{\r\n    \"nome\": \"Ciclano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente enviamos apenas o `id` (para identificarmos o usuário) e os dados a serem alterados._\r\n\r\n### DELETE | Apagar usuário\r\n\r\nObjetivo: exclusão de um dos usuários (**D**elete do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios/{{ID}}\r\nMétodo: DELETE\r\nQuery Params: vazio\r\nBody: vazio\r\n\r\n_Basta enviarmos o `id` para que o usuário seja excluído._",
+		"description": "# Full Stack - SERN | Módulo 03 - Anatomia Web: HTML + CSS\r\n\r\nColeção destinada às práticas ao vivo do Módulo 03 (Anatomia da Web: HTML + CSS) do curso de programação Full Stack (SERN Stack).\r\n\r\n| Nessa prática, como não construímos uma API ainda, os retornos (`response`) são apenas HTMLs fictícios, mas normalmente trabalhamos com dados no formato JSON.\r\n\r\n## Variáveis\r\n\r\n`BASE_URL`: `http://localhost:3333`\r\n\r\n`ID`: `1`\r\n\r\n## Endpoints\r\n\r\nConfira a lista de recursos disponíveis nessa prática.\r\n\r\n### GET | Ver usuários\r\n\r\nObjetivo: leitura dos usuários (**R**ead do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuario\r\n\r\nMétodo: GET\r\n\r\nQuery Params: vazio\r\n\r\nBody: vazio\r\n\r\n### POST | Criar usuário\r\n\r\nObjetivo: criação de um novo usuário (**C**reate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuario\r\n\r\nMétodo: POST\r\n\r\nQuery Params: vazio\r\n\r\nBody:\r\n\r\n```json\r\n{\r\n    \"id\": 1,\r\n    \"nome\": \"Fulano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente não enviamos o `id`, pois ele é gerado automaticamente._\r\n\r\n### PUT | Atualizar usuário\r\n\r\nObjetivo: edição de um dos usuários (**U**pdate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuario/{{ID}}\r\n\r\nMétodo: PUT\r\n\r\nQuery Params: vazio\r\n\r\nBody:\r\n\r\n```json\r\n{\r\n    \"nome\": \"Ciclano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente enviamos apenas o `id` (para identificarmos o usuário) e os dados a serem alterados._\r\n\r\n### DELETE | Apagar usuário\r\n\r\nObjetivo: exclusão de um dos usuários (**D**elete do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuario/{{ID}}\r\n\r\nMétodo: DELETE\r\n\r\nQuery Params: vazio\r\n\r\nBody: vazio\r\n\r\n_Basta enviarmos o `id` para que o usuário seja excluído._",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Usuário",
 			"item": [
+				{
+					"name": "Ver usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/usuario/{{ID}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"usuario",
+								"{{ID}}"
+							]
+						},
+						"description": "### GET | Ver usuário\r\n\r\nObjetivo: leitura dos usuário (**R**ead do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios/{{ID}}\r\n\r\nMétodo: GET\r\n\r\nQuery Params: vazio\r\n\r\nBody: vazio"
+					},
+					"response": []
+				},
 				{
 					"name": "Ver usuários",
 					"request": {
@@ -23,7 +42,7 @@
 								"usuario"
 							]
 						},
-						"description": "### GET | Ver usuários\r\n\r\nObjetivo: leitura dos usuários (**R**ead do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios\r\nMétodo: GET\r\nQuery Params: vazio\r\nBody: vazio"
+						"description": "### GET | Ver usuários\r\n\r\nObjetivo: leitura dos usuários (**R**ead do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios\r\n\r\nMétodo: GET\r\n\r\nQuery Params: vazio\r\n\r\nBody: vazio"
 					},
 					"response": []
 				},
@@ -50,7 +69,7 @@
 								"usuario"
 							]
 						},
-						"description": "### POST | Criar usuário\r\n\r\nObjetivo: criação de um novo usuário (**C**reate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios\r\nMétodo: POST\r\nQuery Params: vazio\r\nBody:\r\n\r\n```json\r\n{\r\n    \"id\": 1,\r\n    \"nome\": \"Fulano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente não enviamos o `id`, pois ele é gerado automaticamente._\r\n"
+						"description": "### POST | Criar usuário\r\n\r\nObjetivo: criação de um novo usuário (**C**reate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios\r\n\r\nMétodo: POST\r\n\r\nQuery Params: vazio\r\n\r\nBody:\r\n\r\n```json\r\n{\r\n    \"id\": 1,\r\n    \"nome\": \"Fulano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente não enviamos o `id`, pois ele é gerado automaticamente._"
 					},
 					"response": []
 				},
@@ -78,7 +97,7 @@
 								"{{ID}}"
 							]
 						},
-						"description": "### PUT | Atualizar usuário\r\n\r\nObjetivo: edição de um dos usuários (**U**pdate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios/{{ID}}\r\nMétodo: PUT\r\nQuery Params: vazio\r\nBody:\r\n\r\n```json\r\n{\r\n    \"nome\": \"Ciclano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente enviamos apenas o `id` (para identificarmos o usuário) e os dados a serem alterados._\r\n"
+						"description": "### PUT | Atualizar usuário\r\n\r\nObjetivo: edição de um dos usuários (**U**pdate do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios/{{ID}}\r\n\r\nMétodo: PUT\r\n\r\nQuery Params: vazio\r\n\r\nBody:\r\n\r\n```json\r\n{\r\n    \"nome\": \"Ciclano\",\r\n    \"sobrenome\": \"da Silva\"\r\n}\r\n```\r\n\r\n_Normalmente enviamos apenas o `id` (para identificarmos o usuário) e os dados a serem alterados._"
 					},
 					"response": []
 				},
@@ -88,16 +107,16 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{BASE_URL}}/usuario/1",
+							"raw": "{{BASE_URL}}/usuario/{{ID}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"usuario",
-								"1"
+								"{{ID}}"
 							]
 						},
-						"description": "### DELETE | Apagar usuário\r\n\r\nObjetivo: exclusão de um dos usuários (**D**elete do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios/{{ID}}\r\nMétodo: DELETE\r\nQuery Params: vazio\r\nBody: vazio\r\n\r\n_Basta enviarmos o `id` para que o usuário seja excluído._"
+						"description": "### DELETE | Apagar usuário\r\n\r\nObjetivo: exclusão de um dos usuários (**D**elete do CRUD).\r\n\r\nEndpoint: {{BASE_URL}}/usuarios/{{ID}}\r\n\r\nMétodo: DELETE\r\n\r\nQuery Params: vazio\r\n\r\nBody: vazio\r\n\r\n_Basta enviarmos o `id` para que o usuário seja excluído._"
 					},
 					"response": []
 				}
