@@ -95,7 +95,15 @@ const express = require("express")
 const app = express()
 const port = 3333
 
-app.listen(port, () => `Servidor rodando na porta ${port}`)
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`))
 ```
 
-_Importamos o Express, atribuímos à const `app`, definimos uma porta (3333) e indicamos que o servidor "escute" a porta `3333` do nosso servidor local (`localhost`)._
+_Importamos o Express, atribuímos à const `app` , definimos uma porta (3333) e indicamos que o servidor "escute" a porta `3333` do nosso servidor local ( `localhost` )._
+
+3. Criar uma rota `GET` para o caminho `/usuario`.
+
+```js
+app.get('/usuario', (req, res) => res.send('<h1>Rota GET para "/usuario"</h1>'))
+```
+
+_Para verificar se deu tudo certo, execute `npm run dev` no terminal e acesse `http://localhost:3333/usuario` em seu browser. Só é possível visualizarmos o retorno pois estamos usando o método HTTP `GET` - não conseguimos visualizar as respostas (ou response) no navegador quando utilizamos os demais métodos._
