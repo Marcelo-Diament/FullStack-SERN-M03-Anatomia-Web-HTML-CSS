@@ -140,4 +140,19 @@ No caso do `POST` , precisamos enviar o conteúdo dentro do `body` da `request` 
 app.put('/usuario/:id', (req, res) => res.send(`<h1>Rota PUT para "/usuario" de id ${req.params.id}</h1>`))
 ```
 
-_Repare que indicamos uma variável no endpoint chamada `id` - esse valor pode ser resgatado ao verificarmos o parâmetro da `request` de nome `id` ( `req.params.id` ). Para declararmos variáveis em URLs de requisições, basta adicionarmos `:` antes do nome pelo qual gostaríamos de acessar a variável. Por exemplo: nesse caso, `:id` será o valor enviado após `http://localhost:3333/usuario/` . Como nossa variável `{{ID}}` possui o valor configurado como `1` , nosso `:id` será `1` também._
+_Repare que indicamos uma variável no endpoint chamada `id` - esse valor pode ser resgatado ao verificarmos o parâmetro da `request` de nome `id` ( `req.params.id` ). Para declararmos variáveis em URLs de requisições, basta adicionarmos `:` antes do nome pelo qual gostaríamos de acessar a variável. Por exemplo: nesse caso, `:id` será o valor enviado após `http://localhost:3333/usuario/` . Como nossa variável `{{ID}}` possui o valor configurado como `1` , nosso `:id` será `1` também. Além do `id` , teríamos de enviar um `body` em nossa request (já estará feito na coleção do Postman); esse `body` representa o conteúdo ( `payload` ) a ser atualizado (para o usuário cujo `id` coincida com o `id` enviado na `request` /URL)._
+
+```json
+{
+    "nome": "Ciclano",
+    "sobrenome": "da Silva"
+}
+```
+
+6. Criar uma rota `DELETE` para o caminho `/usuario/:id`, que "exclua" um usuário existente na lista.
+
+```js
+app.delete('/usuario/:id', (req, res) => res.send(`<h1>Rota DELETE para "/usuario" de id ${req.params.id}</h1>`))
+```
+
+_Dessa vez usamos o `:id` , mas não precisamos enviar nenhum `body` , pois o usuário seria simplesmente excluído._
