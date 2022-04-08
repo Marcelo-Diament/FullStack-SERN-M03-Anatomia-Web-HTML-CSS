@@ -82,8 +82,20 @@ CRUD é um acrônimo para "**C**reate, **R**ead, **U**pdate, **D**elete" (as 4 p
 | Update   | PUT/PATCH |
 | Delete   | DELETE    |
 
-1. Crie o arquivo principal, conforme indicado na propriedade `main` do `package.json`, e abra-o no editor.
+1. Criar o arquivo principal, conforme indicado na propriedade `main` do `package.json`, e abri-lo no editor.
 
 ```sh
 touch index.js && code index.js
 ```
+
+2. Inicializar o servidor Express.
+
+```js
+const express = require("express")
+const app = express()
+const port = 3333
+
+app.listen(port, () => `Servidor rodando na porta ${port}`)
+```
+
+_Importamos o Express, atribuímos à const `app`, definimos uma porta (3333) e indicamos que o servidor "escute" a porta `3333` do nosso servidor local (`localhost`)._
