@@ -130,6 +130,14 @@ No caso do `POST` , precisamos enviar o conteúdo dentro do `body` da `request` 
 
 **Notas:**
 
-- O `id` costuma ser gerado automaticamente.
+* O `id` costuma ser gerado automaticamente.
 
-- Confira a documentação que montamos para você, [clique aqui](https://documenter.getpostman.com/view/6340323/UVyxPYZz).
+* Confira a documentação que montamos para você, [clique aqui](https://documenter.getpostman.com/view/6340323/UVyxPYZz).
+
+5. Criar uma rota `PUT` para o caminho `/usuario/:id`, que "atualize" um novo usuário na lista.
+
+```js
+app.put('/usuario/:id', (req, res) => res.send(`<h1>Rota PUT para "/usuario" de id ${req.params.id}</h1>`))
+```
+
+_Repare que indicamos uma variável no endpoint chamada `id` - esse valor pode ser resgatado ao verificarmos o parâmetro da `request` de nome `id` ( `req.params.id` ). Para declararmos variáveis em URLs de requisições, basta adicionarmos `:` antes do nome pelo qual gostaríamos de acessar a variável. Por exemplo: nesse caso, `:id` será o valor enviado após `http://localhost:3333/usuario/` . Como nossa variável `{{ID}}` possui o valor configurado como `1` , nosso `:id` será `1` também._
