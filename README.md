@@ -1,4 +1,4 @@
-# FullStack-SERN-M03-Anatomia-Web-HTML-CSS
+# Full Stack - SERN | Módulo 03 - Anatomia Web: HTML + CSS
 
 Práticas ao vivo do Módulo 03 (Anatomia da Web: HTML + CSS) do curso de programação Full Stack (SERN Stack)
 
@@ -107,3 +107,13 @@ app.get('/usuario', (req, res) => res.send('<h1>Rota GET para "/usuario"</h1>'))
 ```
 
 _Para verificar se deu tudo certo, execute `npm run dev` no terminal e acesse `http://localhost:3333/usuario` em seu browser. Só é possível visualizarmos o retorno pois estamos usando o método HTTP `GET` - não conseguimos visualizar as respostas (ou response) no navegador quando utilizamos os demais métodos._
+
+4. Criar uma rota `POST` para o caminho `/usuario`, que adicione um novo usuário na lista.
+
+```js
+app.post('/usuario', (req, res) => res.send('<h1>Rota POST para "/usuario"</h1>'))
+```
+
+_Como mencionado anteriormente, não é possível validarmos essa rota simplesmente acessando `http://localhost:3333/usuario` . Para validarmos essa etapa, vamos utilizar o Postman ou o Insomnia. Para realizarmos essa validação, copie o arquivo `./utils/FullStack-SERN-M03-Anatomia-Web-HTML-CSS.postman_collection.json` , abra o Postman, clique em `Import` ou `Importar` , selecione a opção `Raw Text` , cole o `JSON` e clique em `Continuar` . Confirme a importação e abra a `request` "Adicionar usuário", localizada dentro da pasta `Usuário` ._
+
+| Vale ressaltar que normalmente as respostas ( `response` ) são enviadas no formato `JSON` , mas por enquanto estamos retornando um `HTML` simples. Posteriormente iremos construir e consultar nossa própria API.
