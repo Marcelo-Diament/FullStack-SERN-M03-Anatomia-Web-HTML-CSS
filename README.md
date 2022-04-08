@@ -13,3 +13,18 @@ Objetivos:
 * Trabalhando com métodos HTTP
 
 * Testes com Insomnia/Postman
+
+
+### Atividade 01 | Como podemos iniciar um projeto com git?
+
+1. Crie um repositório no Github
+
+2. Crie uma pasta local
+
+3. Conecte ao repositório local
+
+```sh
+git init
+
+git remote add origin <url-repo>
+```
