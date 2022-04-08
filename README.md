@@ -128,4 +128,8 @@ No caso do `POST` , precisamos enviar o conteúdo dentro do `body` da `request` 
 }
 ```
 
-_O `id` costuma ser gerado automaticamente._
+**Notas:**
+
+- O `id` costuma ser gerado automaticamente.
+
+- Confira a documentação que montamos para você, [clique aqui](https://documenter.getpostman.com/view/6340323/UVyxPYZz).
