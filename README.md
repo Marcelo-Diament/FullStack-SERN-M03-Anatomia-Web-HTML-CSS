@@ -14,17 +14,59 @@ Objetivos:
 
 * Testes com Insomnia/Postman
 
-
 ### Atividade 01 | Como podemos iniciar um projeto com git?
 
-1. Crie um repositório no Github
+1. Criar um repositório no Github.
 
-2. Crie uma pasta local
+2. Criar uma pasta local.
 
-3. Conecte ao repositório local
+3. Conectar ao repositório local.
 
 ```sh
 git init
 
 git remote add origin <url-repo>
 ```
+
+### Atividade 02 | Inicializando um projeto Express
+
+1. Inicializar projeto.
+
+```sh
+npm init -y
+```
+
+_Cria o arquivo package.json com as configurações do projeto._
+
+2. Instalar Express (como dependência).
+
+```sh
+npm install express --save
+```
+
+_Instala o pacote node express e o salva como "dependency" no package.json, permitindo criarmos um servidor node._
+
+3. Instalar nodemon (como dependência de desenvolvimento).
+
+```sh
+npm install nodemon --save -D
+```
+
+_Instala o pacote node nodemon e o salva como "devDependency" no package.json, permitindo que o servidor node seja reiniciado a cada atualização salva._
+
+4. Definir os scripts `start` e `dev` no package.json.
+
+```json
+{
+  // ...
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
+  // ...
+}
+```
+
+_Permite que executemos o arquivo index.js através do comando `npm run start` ou `npm run dev` ._
+
+> **Por que usamos `node` no script `start` e `nodemon` no script `dev` ?** Pois, como sabemos, o `nodemon` reinicia o servidor sempre que há atualizações. Esse comportamento é desejável no ambiente local, mas não em um ambiente de produção (esse comportamento prejudicaria a experiência do usuário).
