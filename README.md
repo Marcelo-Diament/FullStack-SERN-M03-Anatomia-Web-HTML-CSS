@@ -72,3 +72,18 @@ _Permite que executemos o arquivo index.js através do comando `npm run start` o
 > **Por que usamos `node` no script `start` e `nodemon` no script `dev` ?** Pois, como sabemos, o `nodemon` reinicia o servidor sempre que há atualizações. Esse comportamento é desejável no ambiente local, mas não em um ambiente de produção (esse comportamento prejudicaria a experiência do usuário).
 
 ### Atividade 03 | Você sabe o que é CRUD?
+
+CRUD é um acrônimo para "**C**reate, **R**ead, **U**pdate, **D**elete" (as 4 principais operações quando se trata de consumo e manipulação de dados). Cada uma dessas operações possui um método HTTP (ou verbo) equivalente, conforme ilustrado a seguir.
+
+| Operação | Método    |
+| -------- | --------- |
+| Create   | POST      |
+| Read     | GET       |
+| Update   | PUT/PATCH |
+| Delete   | DELETE    |
+
+1. Crie o arquivo principal, conforme indicado na propriedade `main` do `package.json`, e abra-o no editor.
+
+```sh
+touch index.js && code index.js
+```
