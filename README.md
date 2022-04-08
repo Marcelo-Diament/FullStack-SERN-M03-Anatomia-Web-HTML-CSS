@@ -163,18 +163,26 @@ Indicamos que um trecho do caminho da rota é uma variável utilizando `:` antes
 
 Exemplo 1:
 
-- Rota: `/usuario/:nome`
+* Rota: `/usuario/:nome`
 
-- URL: `http://localhost:3333/usuario/fulano`
+* URL: `http://localhost:3333/usuario/fulano`
 
-- Captura do `nome`: `req.params.nome` retornará "fulano"
+* Captura do `nome`: `req.params.nome` retornará "fulano"
 
 Exemplo 2:
 
-- Rota: `/usuario/:sobrenome`
+* Rota: `/usuario/:sobrenome`
 
-- URL: `http://localhost:3333/usuario/reis`
+* URL: `http://localhost:3333/usuario/reis`
 
-- Captura do `sobrenome`: `req.params.sobrenome` retornará "reis"
+* Captura do `sobrenome`: `req.params.sobrenome` retornará "reis"
 
-Também podemos indicar que uma variável é opcional inserindo `?` após essa variável (`/usuario/:nome?`).
+Também podemos indicar que uma variável é opcional inserindo `?` após essa variável ( `/usuario/:nome?` ).
+
+### DESAFIO
+
+1. Atualize a rota `GET` tornando o parâmetro `id` opcional e crie uma condição para diferenciar o retorno entre a rota com e sem `id`, exibindo o `id` no retorno (caso seja enviado).
+
+```js
+app.get('/usuario/:id?', (req, res) => req.params.id ? res.send(`<h1>Rota GET para "/usuario/${req.params.id}"</h1>`) : res.send(`<h1>Rota GET para "/usuario"</h1>`))
+```
