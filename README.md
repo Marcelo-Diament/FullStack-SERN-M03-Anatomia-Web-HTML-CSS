@@ -70,3 +70,5 @@ _Instala o pacote node nodemon e o salva como "devDependency" no package.json, p
 _Permite que executemos o arquivo index.js através do comando `npm run start` ou `npm run dev` ._
 
 > **Por que usamos `node` no script `start` e `nodemon` no script `dev` ?** Pois, como sabemos, o `nodemon` reinicia o servidor sempre que há atualizações. Esse comportamento é desejável no ambiente local, mas não em um ambiente de produção (esse comportamento prejudicaria a experiência do usuário).
+
+### Atividade 03 | Você sabe o que é CRUD?
