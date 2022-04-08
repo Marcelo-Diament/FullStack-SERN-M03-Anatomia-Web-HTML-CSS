@@ -1,0 +1,27 @@
+{
+  "name": "fullstack-sern-m03-anatomia-web-html-css",
+  "version": "1.0.0",
+  "description": "Práticas ao vivo do Módulo 03 (Anatomia da Web: HTML + CSS) do curso de programação Full Stack (SERN Stack)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcelo-Diament/FullStack-SERN-M03-Anatomia-Web-HTML-CSS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcelo-Diament/FullStack-SERN-M03-Anatomia-Web-HTML-CSS/issues"
+  },
+  "homepage": "https://github.com/Marcelo-Diament/FullStack-SERN-M03-Anatomia-Web-HTML-CSS#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
